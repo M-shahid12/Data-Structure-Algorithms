@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Sort </title>
+</head>
+
+<body>
+    <script>
+
+        let arr = [22, 6, 55, 44, 22, 88];
+        let swap;
+        for (i = 0; i < arr.length; i++) {
+            console.warn(arr[i])
+            for (j = 0; j < arr.length; j++) {
+
+                if (arr[i] > arr[j]) {
+                    swap = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = swap;
+                }
+
+            }
+
+
+        }
+        console.warn(arr);
+    </script>
+</body>
+
+</html>

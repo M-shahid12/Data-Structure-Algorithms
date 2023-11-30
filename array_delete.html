@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Delete</title>
+</head>
+
+<body>
+    <input type="text" id="remove" placeholder="enter remove element">
+    <button onclick="delelement()">remove</button>
+    <script>
+        function delelement() {
+            let arr = [33, 4, 2, 77, 11, 22];
+            let position = document.getElementById('remove').value
+            position = parseInt(position)
+            for (let i = position; i <= arr.length - 1; i++) {
+
+                arr[i] = arr[i + 1];
+
+            }
+            arr.length = arr.length - 1;
+            console.warn(arr)
+        }
+        // let arr = [33, 4, 2, 77, 11, 22];
+        // let position = 3;
+        // for (let i = position; i <= arr.length - 1; i++) {
+
+        //     arr[i] = arr[i + 1];
+
+        // }
+        // arr.length = arr.length - 1;
+        // console.warn(arr)
+
+
+    </script>
+</body>
+
+</html>

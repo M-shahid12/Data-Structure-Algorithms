@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Triversing </title>
+</head>
+<p id="demo">rai shahid</p>
+
+<body>
+
+
+
+
+
+
+
+
+    <input type="text" id="element" />
+    <button onclick=" callfunction()">Get Input</button>
+    <script>
+        let arr, i;
+        arr = [2, 3, 4, 62, 6, 7, 33];
+        i = ["rai ", " ahmad ", "ali", " kharal"]
+
+        // for (i = 0; i < arr.length; i++) {}
+
+        // document.write(`array ${i} is = ${arr[i]}  `);
+        // document.getElementById('demo').innerHTML = `array ${i} is = ${arr[4]}`;
+
+        function callfunction() {
+            let el = document.getElementById('element').value
+            if (el < arr.length) {
+
+                document.write(arr[el])
+            } else {
+                document.write("please enter a valid number ")
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Insertion</title>
+</head>
+
+<body>
+
+
+
+    <input type="text" id="position" placeholder="Enter Element">
+    <input type="text" id="insert " placeholder="Enter value">
+    <button onclick="inputelement()"> Get value</button>
+    <script>
+
+
+        function inputelement() {
+            let arr = [33, 4, 5, 66, 7, 11, 22, 32];
+            let insert = document.getElementById('insert ').value
+            insert = parseInt(insert)
+            let position = document.getElementById('position').value
+            console.warn(arr);
+            for (let i = arr.length - 1; i >= 0; i--) {
+                // console.warn(arr[i]);
+                if (i >= position) {
+                    arr[i + 1] = arr[i];
+
+
+                    if (i == position) {
+                        arr[i] = insert;
+                    }
+
+                    console.warn(arr)
+                }
+            }
+            console.warn(arr);
+        }
+
+        // let arr = [33, 4, 5, 66, 7, 11, 22, 32];
+        // let insert = 70;
+        // let position = 2;
+        // console.warn(arr)
+        // for (let i = arr.length - 1; i >= 0; i--) {
+        //     // console.warn(arr[i]);
+        //     if (i >= position) {
+        //         arr[i + 1] = arr[i];
+        //     }
+        //     if (i == position) {
+        //         arr[i] = insert;
+        //     }
+        //     console.warn(arr)
+        // }
+    </script>
+</body>
+
+</html>

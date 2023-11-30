@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      class Node {
+        constructor(val) {
+          this.value = val;
+          this.left = null;
+          this.right = null;
+        }
+      }
+      class BStree {
+        constructor() {
+          this.root = null;
+        }
+        istreeEmpty() {
+          return this.root === null;
+        }
+      }
+      let bst = new BStree();
+      console.log(bst.istreeEmpty());
+    </script>
+  </head>
+  <body>
+    <h1>Binary Search tree</h1>
+  </body>
+</html>

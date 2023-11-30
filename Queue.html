@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue in JavsScript</title>
+    <script>
+        let arr = [];
+        let currentSize = arr.length
+        let maxZise = [5];
+
+
+        function enqueue(newVal) {
+            if (currentSize >= maxZise) {
+                alert('queue is overflow')
+            } else {
+                arr[currentSize] = newVal;
+                currentSize++;
+            }
+
+
+        }
+
+        function display() {
+            console.warn(arr)
+        }
+        function dequeue() {
+            if (currentSize > 0) {
+                for (let i = 0; i < arr.length; i++) {
+                    arr[i] = arr[i + 1]
+
+                    // console.warn(arr[i]);
+                }
+                currentSize--;
+                arr.length = currentSize;
+            } else {
+                alert('queue is empty');
+            }
+
+        }
+        enqueue(30);
+        enqueue(40);
+        enqueue(50);
+
+        // enqueue(40);
+        display();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

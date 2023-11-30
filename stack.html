@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack in JavsScript</title>
+    <script>
+        let arr = [];
+        let currentSize = arr.length;
+        let max = 5;
+
+        function push(addval) {
+            if (currentSize >= max) {
+                alert('your stack is full' + addval)
+            }
+            arr[currentSize] = addval
+            currentSize = currentSize + 1;
+        }
+        function pop() {
+            if (currentSize > 0) {
+                currentSize -= 1;
+                // igr size ma se 1 kam hon ga to array ma se bi 1 value kam krne he is lye arr.length ko currentsize ke equal rkhan he
+                arr.length = currentSize;
+
+            } else {
+                alert('your stack is empty')
+            }
+
+        }
+
+        push(20)
+        push(2)
+        push(28)
+        push(7)
+        push(200)
+        pop()
+        pop()
+        // push(20)
+        // push(320)
+        console.warn(arr)
+
+    </script>
+</head>
+
+<body>
+    <h1>Stack in JavsScript</h1>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+        // let arr = [22, 44, 12, 4, 7, 66];
+        // let find = 12;
+        // let pos = undefined;
+        // for (let i = 0; i <= arr.length; i++) {
+        //     if (arr[i] == find) {
+        //         pos = i;
+        //         break;
+        //     }
+
+        // }
+        // if (!pos) {
+        //     alert('this is not found')
+        // }
+        // console.log(pos)
+
+        function searchel() {
+            let arr = [22, 44, 12, 4, 7, 66];
+            let find = document.getElementById('el').value;
+            let pos = undefined;
+            for (let i = 0; i <= arr.length; i++) {
+                if (arr[i] == find) {
+                    pos = i;
+                    break;
+                }
+
+            }
+            if (!pos) {
+                alert('this is not found')
+            } else {
+                alert('this element is index' + pos)
+            }
+            console.log(pos)
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="el" placeholder="enter the value">
+    <button onclick="searchel()">click </button>
+</body>
+
+</html>

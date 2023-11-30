@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Median of two sorted array</title>
+</head>
+
+<body>
+    <script>
+        // Original arrays
+        let arr = [1, 3];
+        let arr2 = [2, 6];
+        let arr3 = [];
+        let position = undefined;
+        let start = 0;
+        let end = arr.length - 1;
+
+        // Copy the values from 'arr' to 'arr3'
+        for (let i = 0; i < arr.length; i++) {
+            arr3[i] = arr[i];
+        }
+
+        // Concatenate 'arr3' with itself to double its length
+        for (let j = 0; j < arr.length; j++) {
+            arr3[arr.length + j] = arr3[j];
+        }
+
+        // Define a function to calculate the median of an array
+        function calculateMedian(arr) {
+            if (arr.length === 0) {
+                return undefined; // Return undefined for an empty array
+            }
+
+
+
+            const midpoint = Math.floor(arr.length / 2);
+            if (arr.length % 2 === 1) {
+                return arr[midpoint]; // If odd length, return the midpoint
+            } else {
+
+                return (arr[midpoint - 1] + arr[midpoint]) / 2;
+            }
+        }
+
+
+        let medianValue = calculateMedian(arr3);
+
+
+        console.log("Median of arr3:", medianValue);
+    </script>
+
+</body>
+
+</html>

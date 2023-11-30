@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stack string reverse</title>
+</head>
+<script>
+    let arr = [];
+    let currentSize = arr.length;
+
+    function push(addval) {
+        arr[currentSize] = addval;
+        currentSize += 1;
+
+    }
+    function pop() {
+        currentSize -= 1;
+        arr.length = currentSize;
+    }
+
+
+    push(250);
+    push(213);
+
+    document.write(arr);
+</script>
+
+<body>
+
+</body>
+
+</html>

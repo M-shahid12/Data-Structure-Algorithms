@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search element</title>
+</head>
+
+<body>
+    <input type="text" id="search" placeholder="write item u search">
+    <button onclick="searchElement()">search</button>
+
+    <script>
+
+
+
+        // let arr = [33, 22, 5, 66, 77, 88, 9, 70];
+        // let item = 70;
+        // let index = undefined;
+        // for (let i = 0; i < arr.length; i++) {
+        //     // console.warn(arr[i])
+        //     if (arr[i] === item) {
+        //         index = i
+        //     }
+
+        // }
+        // console.warn(index);
+
+
+        function searchElement() {
+
+            let arr = [33, 22, 5, 66, 77, 88, 9, 70];
+            let item = document.getElementById('search').value;
+            let index = undefined;
+            for (let i = 0; i <= arr.length - 1; i++) {
+                // console.warn(arr[i])
+                if (arr[i] === parseInt(item)) {
+                    index = i
+                }
+
+            }
+            console.warn(index);
+
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

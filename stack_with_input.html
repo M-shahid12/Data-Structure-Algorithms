@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack in JavsScript</title>
+    <script>
+        let arr = [];
+        let currentSize = arr.length;
+        let max = 5;
+
+        function push() {
+            let addval = document.getElementById('newEl').value
+            if (currentSize >= max) {
+                alert('your stack is full' + addval)
+            } else {
+                arr[currentSize] = addval;
+                currentSize = currentSize + 1;
+                document.getElementById('newEl').value = "";
+                console.warn("element added")
+            }
+
+        }
+        function pop() {
+            if (currentSize > 0) {
+                currentSize -= 1;
+                arr.length = currentSize;
+            } else {
+                alert('your stack is empty')
+            }
+        }
+
+        function DisEl() {
+            // console.warn(arr)
+            for (let i = 0; i <= currentSize - 1; i++) {
+                console.warn('stack element is no ', i, 'and value is ', arr[i])
+            }
+        }
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Stack with input</h1>
+    <input type="text" placeholder="enter stack Element" id="newEl">
+    <button onclick="push()">Add Element to Stack</button>
+    <button onclick="pop()">Remove Element to stack</button>
+    <button onclick="DisEl()">Display all Elements of stack</button>
+</body>
+
+</html>
